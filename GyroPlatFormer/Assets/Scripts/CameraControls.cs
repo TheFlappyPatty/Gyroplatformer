@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
+using Unity.VisualScripting;
+using UnityEngine;
 public class CameraControls : MonoBehaviour
 {
     public GameObject Body;
     public GameObject CameraRig;
+    public float GyroSens;
     public float gyroangleYoffset;
     public float gyroangleZoffset;
     public float gyroangleXoffset;
+    
 
     private void Start()
     {
@@ -17,7 +20,10 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraRig.transform.rotation = new Quaternion(Input.gyro.attitude.y + gyroangleYoffset, Input.gyro.attitude.z + gyroangleZoffset, Input.gyro.attitude.x + gyroangleXoffset, Input.gyro.attitude.w);
-
+        CameraRig.transform.localRotation = GyroToUnity(Input.gyro.attitude);
+    }
+    Quaternion GyroToUnity(Quaternion quat)
+    {
+        return new Quaternion(quat.x, quat.z, quat.y, -quat.w);
     }
 }
