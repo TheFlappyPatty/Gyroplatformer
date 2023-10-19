@@ -7,9 +7,13 @@ public class MoveMent : MonoBehaviour
 {
     public float MovementSpeed;
     public float JumpHeight;
+    [Tooltip("Max speed the player can move")]
     public float MaxSpeed;
+    [Tooltip("The fall Reset Height")]
+    public float KillBox;
     public static float MS;
     public static float JH;
+    public GameObject CheckPoint;
     public static bool Inair = false;
     private static GameObject MoveDiection;
     private static Rigidbody PlayerRB;
@@ -21,6 +25,10 @@ public class MoveMent : MonoBehaviour
     }
     public void Update()
     {
+        if (gameObject.transform.position.y < KillBox)
+        {
+            gameObject.transform.position = CheckPoint.transform.position;
+        }
         MoveDiection = GameObject.Find("PlayerHead");
         if(Inair == false)
         {
@@ -50,9 +58,18 @@ public class MoveMent : MonoBehaviour
     }
     public static void Jump()
     {
-        
-        PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
-        Inair = true;
+     if(Inair == false)
+        {
+            PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
+            Inair = true;
+        }   
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "CheckPoint")
+        {
+            CheckPoint = other.gameObject;
+        }
     }
     public void OnCollisionEnter(Collision collision)
     {

@@ -36,6 +36,10 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.moveRight();
             }
+            if (ButtonType == Type.Jump)
+            {
+                MoveMent.Jump();
+            }
         }
         else
         {
@@ -53,7 +57,8 @@ public class ButtonFix : MonoBehaviour
         Forward,
         Backward,
         Left,
-        Right
+        Right,
+        Jump
     }
 
 }
