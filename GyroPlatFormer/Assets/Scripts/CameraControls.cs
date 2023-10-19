@@ -7,10 +7,6 @@ public class CameraControls : MonoBehaviour
 {
     public GameObject Body;
     public GameObject CameraRig;
-    public float GyroSens;
-    public float gyroangleYoffset;
-    public float gyroangleZoffset;
-    public float gyroangleXoffset;
     
 
     private void Start()
@@ -20,7 +16,9 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CameraRig.transform.position = Body.GetComponentInChildren<Transform>().position;
         CameraRig.transform.localRotation = GyroToUnity(Input.gyro.attitude);
+        Body.transform.eulerAngles = new Vector3(0,CameraRig.transform.eulerAngles.y,0);
     }
     Quaternion GyroToUnity(Quaternion quat)
     {
