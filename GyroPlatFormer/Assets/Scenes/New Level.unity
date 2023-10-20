@@ -816,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 5743881423965219982, guid: 7a1469ce87a056541848a7cb46363ad2, type: 3}
       propertyPath: CheckPoint
       value: 
-      objectReference: {fileID: 1226610228}
+      objectReference: {fileID: 0}
     - target: {fileID: 5743881423965219982, guid: 7a1469ce87a056541848a7cb46363ad2, type: 3}
       propertyPath: MovementSpeed
       value: 4
@@ -4790,11 +4790,6 @@ Transform:
   m_Father: {fileID: 1664840907}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1226610228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2286736640166588172, guid: 2f9917597fbfaf942868832aa2f6eb52, type: 3}
-  m_PrefabInstance: {fileID: 1846940558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251722830
 GameObject:
   m_ObjectHideFlags: 0
