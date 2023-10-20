@@ -77,5 +77,9 @@ public class MoveMent : MonoBehaviour
         {
             Inair = false;
         }
+        if(collision.transform.tag == "Deathfloor")
+        {
+            Debug.Log("You died");
+        }
     }
 }
