@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 04e84f5853643bf4cbf9b5b2a9fea1d3
   m_configObjects: {}
