@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveMent : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MoveMent : MonoBehaviour
     public static float MS;
     public static float JH;
     public GameObject CheckPoint;
+    public Vector3 DeathBoxPos;
     public static bool Inair = false;
     private static GameObject MoveDiection;
     private static Rigidbody PlayerRB;
@@ -69,6 +71,7 @@ public class MoveMent : MonoBehaviour
         if(other.tag == "CheckPoint")
         {
             CheckPoint = other.gameObject;
+            DeathBoxPos = GameObject.FindGameObjectWithTag("DeathFloor").transform.position;
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -77,9 +80,9 @@ public class MoveMent : MonoBehaviour
         {
             Inair = false;
         }
-        if(collision.transform.tag == "Deathfloor")
+        if(collision.transform.tag == "DeathFloor")
         {
-            Debug.Log("You died");
+            GameObject.FindGameObjectWithTag("DeathFloor").transform.position = DeathBoxPos;
         }
     }
 }
