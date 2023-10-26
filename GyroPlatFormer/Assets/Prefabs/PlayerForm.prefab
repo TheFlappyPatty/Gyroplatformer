@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4447362445137354753}
   - component: {fileID: 6181235434515641579}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Backward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,6 +166,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4447362445137354753}
+          m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
+          m_MethodName: Buttonhold
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4447362445137354753}
+          m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
+          m_MethodName: Buttonhold
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &2807690172357146090
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,8 +302,10 @@ MonoBehaviour:
   MovementSpeed: 0
   JumpHeight: 10
   MaxSpeed: 0
-  KillBox: 0
+  DeathHieght: 0
   CheckPoint: {fileID: 0}
+  DeathBoxPos: {x: 0, y: 0, z: 0}
+  DeathWall: {fileID: 0}
 --- !u!54 &7873897476249420841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -585,7 +619,7 @@ GameObject:
   - component: {fileID: 583797962026669595}
   - component: {fileID: 5346182513109591736}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,6 +770,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 583797962026669595}
+          m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
+          m_MethodName: Buttonhold
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 583797962026669595}
+          m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
+          m_MethodName: Buttonhold
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &4704316164425556395
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,12 +885,12 @@ GameObject:
   - component: {fileID: 1047773718711405223}
   - component: {fileID: 1718635040475490551}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6233088842439435657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -985,12 +1051,12 @@ GameObject:
   - component: {fileID: 8343192966068439670}
   - component: {fileID: 452839010535061186}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4197624074968019060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1151,7 +1217,7 @@ GameObject:
   - component: {fileID: 1938041451257037472}
   - component: {fileID: 8245321085393809613}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
