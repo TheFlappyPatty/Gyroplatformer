@@ -35,7 +35,7 @@ public class MoveMent : MonoBehaviour
         MoveDiection = GameObject.Find("PlayerHead");
         if(Inair == false && IsMoveing == false)
         {
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS * 2, ForceMode.Acceleration);
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS, ForceMode.Acceleration);
         }
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
