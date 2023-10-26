@@ -11,7 +11,7 @@ public class MoveMent : MonoBehaviour
     [Tooltip("Max speed the player can move")]
     public float MaxSpeed;
     [Tooltip("The fall Reset Height")]
-    public float KillBox;
+    public float DeathHieght;
     public static bool IsMoveing;
     public static float MS;
     public static float JH;
@@ -28,14 +28,14 @@ public class MoveMent : MonoBehaviour
     }
     public void Update()
     {
-        if (gameObject.transform.position.y < KillBox)
+        if (gameObject.transform.position.y < DeathHieght)
         {
             gameObject.transform.position = CheckPoint.transform.position;
         }
         MoveDiection = GameObject.Find("PlayerHead");
         if(Inair == false && IsMoveing == false)
         {
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS, ForceMode.Acceleration);
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * 100, ForceMode.Acceleration);
         }
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
@@ -88,6 +88,7 @@ public class MoveMent : MonoBehaviour
         if(collision.transform.tag == "DeathFloor")
         {
             GameObject.FindGameObjectWithTag("DeathFloor").transform.position = DeathBoxPos;
+            gameObject.transform.position = DeathBoxPos;
         }
     }
 }
