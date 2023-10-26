@@ -34,7 +34,7 @@ public class MoveMent : MonoBehaviour
         MoveDiection = GameObject.Find("PlayerHead");
         if(Inair == false)
         {
-            PlayerRB.velocity = new Vector3(0,PlayerRB.velocity.y,0);
+           // PlayerRB.velocity = new Vector3(0,PlayerRB.velocity.y,0);
         }
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
@@ -44,19 +44,19 @@ public class MoveMent : MonoBehaviour
 
     public static void moveforward()
     {
-        PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.VelocityChange);
+        PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
     }
     public static void moveBack()
     {
-        PlayerRB.AddForce(-MoveDiection.transform.forward.normalized * MS, ForceMode.VelocityChange);
+        PlayerRB.AddForce(-MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
     }
     public static void moveLeft()
     {
-        PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.VelocityChange);
+        PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
     }
     public static void moveRight()
     {
-        PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.VelocityChange);
+        PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
     }
     public static void Jump()
     {
