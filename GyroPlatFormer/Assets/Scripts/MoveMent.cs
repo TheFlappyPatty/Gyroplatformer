@@ -41,7 +41,10 @@ public class MoveMent : MonoBehaviour
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
         }
     }
-
+    public static void ButtonUp()
+    {
+        PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS, ForceMode.Acceleration);
+    }
     public static void moveforward()
     {
         PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
