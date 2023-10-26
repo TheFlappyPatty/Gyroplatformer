@@ -12,6 +12,7 @@ public class MoveMent : MonoBehaviour
     public float MaxSpeed;
     [Tooltip("The fall Reset Height")]
     public float KillBox;
+    public static bool IsMoveing;
     public static float MS;
     public static float JH;
     public GameObject CheckPoint;
@@ -32,40 +33,41 @@ public class MoveMent : MonoBehaviour
             gameObject.transform.position = CheckPoint.transform.position;
         }
         MoveDiection = GameObject.Find("PlayerHead");
-        if(Inair == false)
+        if(Inair == false && IsMoveing == false)
         {
-           // PlayerRB.velocity = new Vector3(0,PlayerRB.velocity.y,0);
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS, ForceMode.Acceleration);
         }
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
         }
     }
-    public static void ButtonUp()
-    {
-        PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * MS, ForceMode.Acceleration);
-    }
     public static void moveforward()
     {
         PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
+        IsMoveing = true;
     }
     public static void moveBack()
     {
         PlayerRB.AddForce(-MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
+        IsMoveing = true;
     }
     public static void moveLeft()
     {
         PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
+        IsMoveing = true;
     }
     public static void moveRight()
     {
         PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
+        IsMoveing = true;
     }
     public static void Jump()
     {
      if(Inair == false)
         {
             PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
+            IsMoveing = true;
             Inair = true;
         }   
     }
