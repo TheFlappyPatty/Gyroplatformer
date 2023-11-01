@@ -16,6 +16,7 @@ public class MoveMent : MonoBehaviour
     public float MaxSpeed;
     [Tooltip("The fall Reset Height")]
     public float DeathHieght;
+    public float SlideResistance;
 
     //Static Varables for other scripts
     public static float MS;
@@ -44,10 +45,11 @@ public class MoveMent : MonoBehaviour
             gameObject.transform.position = CheckPoint.transform.position;
         }
         MoveDiection = GameObject.Find("PlayerHead");
-        if(Inair == false && IsMoving == false)
+        if(PlayerRB.velocity.x > 0 || PlayerRB.velocity.z > 0)
         {
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * 100, ForceMode.Acceleration);
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * SlideResistance, ForceMode.Acceleration);
         }
+        IsMoving = false;
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;

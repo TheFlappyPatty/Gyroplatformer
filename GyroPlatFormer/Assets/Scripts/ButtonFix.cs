@@ -40,7 +40,6 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.Jump();
             }
-            MoveMent.IsMoving = true;
         }
         else
         {
