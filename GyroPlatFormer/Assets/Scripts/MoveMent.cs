@@ -50,6 +50,7 @@ public class MoveMent : MonoBehaviour
             PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
         }
         IsMoving = false;
+        Debug.Log(IsMoving);
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
