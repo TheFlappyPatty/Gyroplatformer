@@ -45,9 +45,9 @@ public class MoveMent : MonoBehaviour
             gameObject.transform.position = CheckPoint.transform.position;
         }
         MoveDiection = GameObject.Find("PlayerHead");
-        if(PlayerRB.velocity.x > 0 || PlayerRB.velocity.z > 0)
+        if(IsMoving == false && Inair == false)
         {
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity * SlideResistance, ForceMode.Acceleration);
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
         }
         IsMoving = false;
         if(PlayerRB.velocity.magnitude > MaxSpeed)
