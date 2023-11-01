@@ -87,7 +87,7 @@ public class MoveMent : MonoBehaviour
         if(other.tag == "CheckPoint")
         {
             CheckPoint = other.gameObject;
-            DeathBoxPos = GameObject.FindGameObjectWithTag("DeathFloor").transform.position;
+            DeathBoxPos = DeathWall.transform.position;
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -98,7 +98,7 @@ public class MoveMent : MonoBehaviour
         }
         if(collision.transform.tag == "DeathFloor")
         {
-            GameObject.FindGameObjectWithTag("DeathFloor").transform.position = DeathBoxPos;
+            DeathWall.transform.position = DeathBoxPos;
             gameObject.transform.position = DeathBoxPos;
         }
     }

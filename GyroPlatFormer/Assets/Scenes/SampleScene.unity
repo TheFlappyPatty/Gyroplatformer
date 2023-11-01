@@ -224,7 +224,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!65 &681125941
 BoxCollider:
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3709796400877970440, guid: 2f9917597fbfaf942868832aa2f6eb52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.29
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3709796400877970440, guid: 2f9917597fbfaf942868832aa2f6eb52, type: 3}
       propertyPath: m_LocalRotation.w
