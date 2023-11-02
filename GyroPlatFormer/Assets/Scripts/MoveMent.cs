@@ -42,18 +42,23 @@ public class MoveMent : MonoBehaviour
     {
         if (gameObject.transform.position.y < DeathHieght)
         {
-            gameObject.transform.position = CheckPoint.transform.position;
+            Death();
         }
         MoveDiection = GameObject.Find("PlayerHead");
         if(IsMoving == false && Inair == false)
         {
-            var Movedirection = -MoveDiection.GetComponent<Rigidbody>().velocity.normalized;
-            PlayerRB.AddForce(Movedirection * SlideResistance, ForceMode.Acceleration);
+            
+            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
         }
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
         }
+    }
+    public void Death()
+    {
+        gameObject.transform.position = CheckPoint.transform.position;
+        DeathWall.transform.position = DeathBoxPos;
     }
     public static void moveforward()
     {
@@ -95,8 +100,7 @@ public class MoveMent : MonoBehaviour
         }
         if(collision.transform.tag == "DeathFloor")
         {
-            DeathWall.transform.position = DeathBoxPos;
-            gameObject.transform.position = DeathBoxPos;
+            Death();
         }
     }
 }
