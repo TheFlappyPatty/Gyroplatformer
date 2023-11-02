@@ -40,9 +40,11 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.Jump();
             }
+            MoveMent.IsMoving = true;
         }
         else
         {
+            MoveMent.IsMoving = false;
             Button.color = NormalColor;
         }
     }

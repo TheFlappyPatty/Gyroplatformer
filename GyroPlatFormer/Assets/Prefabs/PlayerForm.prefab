@@ -287,6 +287,7 @@ MonoBehaviour:
   JumpHeight: 10
   MaxSpeed: 0
   DeathHieght: 0
+  SlideResistance: 0
   CheckPoint: {fileID: 0}
   DeathBoxPos: {x: 0, y: 0, z: 0}
   DeathWall: {fileID: 0}
@@ -313,7 +314,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2807690172357146090}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 655743887ed674249be7f10ec67f47f3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5

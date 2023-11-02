@@ -47,10 +47,9 @@ public class MoveMent : MonoBehaviour
         MoveDiection = GameObject.Find("PlayerHead");
         if(IsMoving == false && Inair == false)
         {
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
+            var Movedirection = -MoveDiection.GetComponent<Rigidbody>().velocity.normalized;
+            PlayerRB.AddForce(Movedirection * SlideResistance, ForceMode.Acceleration);
         }
-        IsMoving = false;
-        Debug.Log(IsMoving);
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
@@ -59,29 +58,24 @@ public class MoveMent : MonoBehaviour
     public static void moveforward()
     {
         PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
-        IsMoving = true;
     }
     public static void moveBack()
     {
         PlayerRB.AddForce(-MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
-        IsMoving = true;
     }
     public static void moveLeft()
     {
         PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
-        IsMoving = true;
     }
     public static void moveRight()
     {
         PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
-        IsMoving = true;
     }
     public static void Jump()
     {
      if(Inair == false)
         {
             PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
-            IsMoving = true;
             Inair = true;
         }   
     }
