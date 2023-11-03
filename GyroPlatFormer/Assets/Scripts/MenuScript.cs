@@ -15,7 +15,7 @@ public class MenuScript : MonoBehaviour
     }
     public void Settings()
     {
-
+        GetComponentInParent<CanvasManager>().SwitchCanvas(1);
     }
     public void Exit()
     {
