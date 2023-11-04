@@ -9,7 +9,6 @@ public class CameraControls : MonoBehaviour
     public GameObject Body;
     public GameObject CameraRig;
 
-    [Event(3)]
     public IEnumerator Debugmode()
     {
         return null;
