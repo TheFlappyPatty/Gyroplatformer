@@ -9,14 +9,6 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(Level1);
     }
-    public void Credits()
-    {
-        
-    }
-    public void Settings()
-    {
-        GetComponentInParent<CanvasManager>().SwitchCanvas(1);
-    }
     public void Exit()
     {
         Application.Quit();

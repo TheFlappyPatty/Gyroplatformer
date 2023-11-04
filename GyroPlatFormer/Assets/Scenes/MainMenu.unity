@@ -3102,6 +3102,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674033207}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &689692534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7694470445538909600, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+  m_PrefabInstance: {fileID: 5923538387744936045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bbdcb03403351459962881e9a20da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &717533576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,6 +3307,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721613929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &722396400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8738288585965944609, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+  m_PrefabInstance: {fileID: 5923538387744936045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745026258
 GameObject:
   m_ObjectHideFlags: 0
@@ -8516,6 +8532,74 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5923538387949701902, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538387949701902, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 689692534}
+    - target: {fileID: 5923538387949701902, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538387949701902, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538387949701902, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538388532963351, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538388532963351, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 689692534}
+    - target: {fileID: 5923538388532963351, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538388532963351, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923538388532963351, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669665003589109767, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669665003589109767, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 689692534}
+    - target: {fileID: 7669665003589109767, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669665003589109767, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694470445538909600, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: canvasnames.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694470445538909600, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: CurrentCanvases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694470445538909600, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
+      propertyPath: CurrentCanvases.Array.data[2]
+      value: 
+      objectReference: {fileID: 722396400}
     - target: {fileID: 8200188733410650903, guid: 45ef5aeaa1706274fb951896c541b4c7, type: 3}
       propertyPath: m_Name
       value: UI
