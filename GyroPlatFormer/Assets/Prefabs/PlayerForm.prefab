@@ -285,10 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297e2e247f3fd58478ad5c4d912f3e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 0
-  JumpHeight: 10
-  MaxSpeed: 0
-  DeathHieght: 0
+  MovementSpeed: 18
+  JumpHeight: 15
+  MaxSpeed: 10
+  DeathHieght: -30
   SlideResistance: 0
   CheckPoint: {fileID: 0}
   DeathBoxPos: {x: 0, y: 0, z: 0}
