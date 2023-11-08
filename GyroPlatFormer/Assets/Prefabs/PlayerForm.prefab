@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2869375519287183457}
   - component: {fileID: 6120690171963350222}
   - component: {fileID: 8066635920024009918}
-  - component: {fileID: 4447362445137354753}
+  - component: {fileID: 1765493879337194308}
   - component: {fileID: 6181235434515641579}
   m_Layer: 5
   m_Name: Backward
@@ -105,7 +105,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4447362445137354753
+--- !u!114 &1765493879337194308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4447362445137354753}
+        - m_Target: {fileID: 1765493879337194308}
           m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
           m_MethodName: Buttonhold
           m_Mode: 6
@@ -155,7 +155,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4447362445137354753}
+        - m_Target: {fileID: 1765493879337194308}
           m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
           m_MethodName: Buttonhold
           m_Mode: 6
@@ -171,7 +171,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4447362445137354753}
+        - m_Target: {fileID: 1765493879337194308}
           m_TargetAssemblyTypeName: ButtonFix, Assembly-CSharp
           m_MethodName: Buttonhold
           m_Mode: 6

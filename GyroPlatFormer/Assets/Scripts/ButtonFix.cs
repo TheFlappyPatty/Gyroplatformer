@@ -12,6 +12,7 @@ public class ButtonFix : MonoBehaviour
     public Type ButtonType;
     public bool isholding;
     public MoveMent player;
+    public bool button2;
     private void Start()
     {
         Button = gameObject.GetComponent<Image>();
@@ -19,7 +20,15 @@ public class ButtonFix : MonoBehaviour
     }
     public void Update()
     {
+        if(button2 == true)
+        {
+            player.IsMoving1 = isholding;
+        }
+        else
+        {
         player.IsMoving = isholding;
+        }
+
         if (isholding)
         {
             Button.color = Highlighted;

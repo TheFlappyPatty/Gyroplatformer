@@ -32,6 +32,7 @@ public class MoveMent : MonoBehaviour
     //Player States
     public static bool Inair = false;
     public bool IsMoving;
+    public bool IsMoving1;
 
     public void Start()
     {
@@ -46,7 +47,7 @@ public class MoveMent : MonoBehaviour
             Death();
         }
         MoveDiection = GameObject.Find("PlayerHead");
-        if (IsMoving == false && Inair == false)
+        if (IsMoving == false || IsMoving1 == false && Inair == false)
         {
             //PlayerRB.AddForce(new Vector3(0,0,0), ForceMode.VelocityChange); 
             PlayerRB.Sleep();
