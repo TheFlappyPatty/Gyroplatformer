@@ -62,19 +62,21 @@ public class MoveMent : MonoBehaviour
     }
     public static void moveforward()
     {
-        PlayerRB.AddForce(MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, PlayerRB.velocity.y, MoveDiection.transform.forward.normalized.z * MS);
+        PlayerRB.AddForce(MoveDir, ForceMode.VelocityChange);
     }
     public static void moveBack()
     {
-        PlayerRB.AddForce(-MoveDiection.transform.forward.normalized * MS, ForceMode.Acceleration);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, PlayerRB.velocity.y, MoveDiection.transform.forward.normalized.z * MS);
+        PlayerRB.AddForce(-MoveDir, ForceMode.VelocityChange);
     }
     public static void moveLeft()
     {
-        PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
+        PlayerRB.AddForce(-MoveDiection.transform.right.normalized * MS, ForceMode.VelocityChange);
     }
     public static void moveRight()
     {
-        PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.Acceleration);
+        PlayerRB.AddForce(MoveDiection.transform.right.normalized * MS, ForceMode.VelocityChange);
     }
     public static void Jump()
     {
