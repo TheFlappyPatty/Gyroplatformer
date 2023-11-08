@@ -48,7 +48,8 @@ public class MoveMent : MonoBehaviour
         MoveDiection = GameObject.Find("PlayerHead");
         if (IsMoving == false && Inair == false)
         {
-            PlayerRB.AddForce(new Vector3(0,0,0), ForceMode.VelocityChange);
+            //PlayerRB.AddForce(new Vector3(0,0,0), ForceMode.VelocityChange); 
+            PlayerRB.Sleep();
             Debug.LogError("if you see this there is no god");
         }
         if (PlayerRB.velocity.magnitude > MaxSpeed)
