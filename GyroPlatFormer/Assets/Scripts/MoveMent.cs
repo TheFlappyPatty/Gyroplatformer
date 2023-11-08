@@ -45,11 +45,11 @@ public class MoveMent : MonoBehaviour
             Death();
         }
         MoveDiection = GameObject.Find("PlayerHead");
-        if(IsMoving == false && Inair == false)
-        {
+        //if(IsMoving == false && Inair == false)
+        //{
             
-            PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
-        }
+        //    PlayerRB.AddForce(-MoveDiection.GetComponent<Rigidbody>().velocity.normalized * SlideResistance, ForceMode.Acceleration);
+        //}
         if(PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
@@ -62,12 +62,12 @@ public class MoveMent : MonoBehaviour
     }
     public static void moveforward()
     {
-        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, PlayerRB.velocity.y, MoveDiection.transform.forward.normalized.z * MS);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y * MS, MoveDiection.transform.forward.normalized.z * MS);
         PlayerRB.AddForce(MoveDir, ForceMode.VelocityChange);
     }
     public static void moveBack()
     {
-        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, PlayerRB.velocity.y, MoveDiection.transform.forward.normalized.z * MS);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y * MS, MoveDiection.transform.forward.normalized.z * MS);
         PlayerRB.AddForce(-MoveDir, ForceMode.VelocityChange);
     }
     public static void moveLeft()
