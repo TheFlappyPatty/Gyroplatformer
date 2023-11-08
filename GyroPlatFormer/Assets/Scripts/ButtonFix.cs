@@ -23,10 +23,12 @@ public class ButtonFix : MonoBehaviour
             if (ButtonType == Type.Forward)
             {
                 MoveMent.moveforward();
+                MoveMent.IsMoving = isholding;
             }
             if (ButtonType == Type.Backward)
             {
                 MoveMent.moveBack();
+                MoveMent.IsMoving = isholding;
             }
             if (ButtonType == Type.Left)
             {
@@ -40,13 +42,13 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.Jump();
             }
-            MoveMent.IsMoving = true;
+
         }
         else
         {
-            MoveMent.IsMoving = false;
             Button.color = NormalColor;
         }
+        MoveMent.IsMoving = false;
     }
     public void Buttonhold(bool Select)
     {
