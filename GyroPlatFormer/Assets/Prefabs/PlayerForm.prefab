@@ -122,6 +122,7 @@ MonoBehaviour:
   ButtonType: 1
   isholding: 0
   player: {fileID: 5743881423965219982}
+  button2: 1
 --- !u!114 &6181235434515641579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +294,7 @@ MonoBehaviour:
   DeathBoxPos: {x: 0, y: 0, z: 0}
   DeathWall: {fileID: 0}
   IsMoving: 0
+  IsMoving1: 0
 --- !u!54 &7873897476249420841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -730,6 +732,7 @@ MonoBehaviour:
   ButtonType: 0
   isholding: 0
   player: {fileID: 5743881423965219982}
+  button2: 0
 --- !u!114 &5346182513109591736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,6 +984,7 @@ MonoBehaviour:
   ButtonType: 2
   isholding: 0
   player: {fileID: 0}
+  button2: 0
 --- !u!114 &1718635040475490551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,6 +1152,7 @@ MonoBehaviour:
   ButtonType: 3
   isholding: 0
   player: {fileID: 0}
+  button2: 0
 --- !u!114 &452839010535061186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1315,6 +1320,7 @@ MonoBehaviour:
   ButtonType: 4
   isholding: 0
   player: {fileID: 5743881423965219982}
+  button2: 0
 --- !u!114 &8245321085393809613
 MonoBehaviour:
   m_ObjectHideFlags: 0
