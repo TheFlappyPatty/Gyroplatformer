@@ -19,9 +19,9 @@ public class ButtonFix : MonoBehaviour
     }
     public void Update()
     {
+        player.IsMoving = isholding;
         if (isholding)
         {
-            player.IsMoving = true;
             Button.color = Highlighted;
             if (ButtonType == Type.Forward)
             {
@@ -47,7 +47,6 @@ public class ButtonFix : MonoBehaviour
         else
         {
             Button.color = NormalColor;
-            player.IsMoving = false;
         }
 
     }
