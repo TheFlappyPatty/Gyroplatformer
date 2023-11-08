@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -62,12 +63,12 @@ public class MoveMent : MonoBehaviour
     }
     public static void moveforward()
     {
-        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y * MS, MoveDiection.transform.forward.normalized.z * MS);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y - Physics.gravity.y * MS, MoveDiection.transform.forward.normalized.z * MS);
         PlayerRB.AddForce(MoveDir, ForceMode.VelocityChange);
     }
     public static void moveBack()
     {
-        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y * MS, MoveDiection.transform.forward.normalized.z * MS);
+        var MoveDir = new Vector3(MoveDiection.transform.forward.normalized.x * MS, MoveDiection.transform.forward.normalized.y - Physics.gravity.y * MS, MoveDiection.transform.forward.normalized.z * MS);
         PlayerRB.AddForce(-MoveDir, ForceMode.VelocityChange);
     }
     public static void moveLeft()
