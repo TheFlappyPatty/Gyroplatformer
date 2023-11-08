@@ -121,6 +121,7 @@ MonoBehaviour:
   NormalColor: {r: 0.3972944, g: 0.9056604, b: 0.45449123, a: 1}
   ButtonType: 1
   isholding: 0
+  player: {fileID: 5743881423965219982}
 --- !u!114 &6181235434515641579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +292,7 @@ MonoBehaviour:
   CheckPoint: {fileID: 0}
   DeathBoxPos: {x: 0, y: 0, z: 0}
   DeathWall: {fileID: 0}
+  IsMoving: 0
 --- !u!54 &7873897476249420841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -727,6 +729,7 @@ MonoBehaviour:
   NormalColor: {r: 0.3972944, g: 0.9056604, b: 0.45449123, a: 1}
   ButtonType: 0
   isholding: 0
+  player: {fileID: 5743881423965219982}
 --- !u!114 &5346182513109591736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +980,7 @@ MonoBehaviour:
   NormalColor: {r: 0.3972944, g: 0.9056604, b: 0.45449123, a: 1}
   ButtonType: 2
   isholding: 0
+  player: {fileID: 0}
 --- !u!114 &1718635040475490551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,6 +1147,7 @@ MonoBehaviour:
   NormalColor: {r: 0.3972944, g: 0.9056604, b: 0.45449123, a: 1}
   ButtonType: 3
   isholding: 0
+  player: {fileID: 0}
 --- !u!114 &452839010535061186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,6 +1314,7 @@ MonoBehaviour:
   NormalColor: {r: 0, g: 0.092921734, b: 1, a: 1}
   ButtonType: 4
   isholding: 0
+  player: {fileID: 5743881423965219982}
 --- !u!114 &8245321085393809613
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class MoveMent : MonoBehaviour
 
     //Player States
     public static bool Inair = false;
-    public static bool IsMoving;
+    public bool IsMoving;
 
     public void Start()
     {

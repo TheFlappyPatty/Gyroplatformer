@@ -11,9 +11,11 @@ public class ButtonFix : MonoBehaviour
     private Image Button;
     public Type ButtonType;
     public bool isholding;
+    public MoveMent player;
     private void Start()
     {
         Button = gameObject.GetComponent<Image>();
+        
     }
     public void Update()
     {
@@ -23,12 +25,10 @@ public class ButtonFix : MonoBehaviour
             if (ButtonType == Type.Forward)
             {
                 MoveMent.moveforward();
-                MoveMent.IsMoving = isholding;
             }
             if (ButtonType == Type.Backward)
             {
                 MoveMent.moveBack();
-                MoveMent.IsMoving = isholding;
             }
             if (ButtonType == Type.Left)
             {
@@ -42,13 +42,14 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.Jump();
             }
-
+            player.IsMoving = true;
         }
         else
         {
             Button.color = NormalColor;
+            player.IsMoving = false;
         }
-        MoveMent.IsMoving = false;
+
     }
     public void Buttonhold(bool Select)
     {
