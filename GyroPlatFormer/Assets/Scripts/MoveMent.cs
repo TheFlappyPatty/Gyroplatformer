@@ -50,7 +50,10 @@ public class MoveMent : MonoBehaviour
         {
             //PlayerRB.AddForce(new Vector3(0,0,0), ForceMode.VelocityChange); 
             PlayerRB.Sleep();
-            Debug.LogError("if you see this there is no god");
+        }
+        else
+        {
+            PlayerRB.WakeUp();
         }
         if (PlayerRB.velocity.magnitude > MaxSpeed)
         {
