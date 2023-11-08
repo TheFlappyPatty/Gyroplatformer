@@ -21,6 +21,7 @@ public class ButtonFix : MonoBehaviour
     {
         if (isholding)
         {
+            player.IsMoving = true;
             Button.color = Highlighted;
             if (ButtonType == Type.Forward)
             {
@@ -42,7 +43,6 @@ public class ButtonFix : MonoBehaviour
             {
                 MoveMent.Jump();
             }
-            player.IsMoving = true;
         }
         else
         {
