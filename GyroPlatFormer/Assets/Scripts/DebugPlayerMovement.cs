@@ -35,4 +35,11 @@ public class DebugPlayerMovement : MonoBehaviour
         transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
 
     }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Ground")
+        {
+            Inair = false;
+        }
+    }
 }
