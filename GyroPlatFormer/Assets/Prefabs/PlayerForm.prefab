@@ -298,6 +298,11 @@ MonoBehaviour:
   footstepSounds:
   - {fileID: 8300000, guid: e85017a149d81084cae77eb281c57ced, type: 3}
   - {fileID: 8300000, guid: cc41674809483e1468ef4ce50ad77cbf, type: 3}
+  JumpSounds:
+  - {fileID: 8300000, guid: c9045cd8820a2db45bfa58343d36424b, type: 3}
+  - {fileID: 8300000, guid: 3fde81ca89e18f641a3836f2359eb361, type: 3}
+  - {fileID: 8300000, guid: 0e73d86b11f5a9343a27845799e0701c, type: 3}
+  - {fileID: 8300000, guid: 43bbe41f4766f604daac1b85c9b2a4cb, type: 3}
   minTimeBetweenFootsteps: 0.3
   maxTimeBetweenFootsteps: 0.6
 --- !u!54 &7873897476249420841
