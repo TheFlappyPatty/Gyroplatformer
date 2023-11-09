@@ -295,6 +295,11 @@ MonoBehaviour:
   DeathWall: {fileID: 0}
   IsMoving: 0
   IsMoving1: 0
+  footstepSounds:
+  - {fileID: 8300000, guid: e85017a149d81084cae77eb281c57ced, type: 3}
+  - {fileID: 8300000, guid: cc41674809483e1468ef4ce50ad77cbf, type: 3}
+  minTimeBetweenFootsteps: 0.3
+  maxTimeBetweenFootsteps: 0.6
 --- !u!54 &7873897476249420841
 Rigidbody:
   m_ObjectHideFlags: 0

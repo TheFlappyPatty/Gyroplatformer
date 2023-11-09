@@ -1,7 +1,5 @@
 //using Palmmedia.ReportGenerator.Core;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,10 +27,23 @@ public class MoveMent : MonoBehaviour
     public Vector3 DeathBoxPos;
     public GameObject DeathWall;
 
+
     //Player States
     public static bool Inair = false;
     public bool IsMoving;
     public bool IsMoving1;
+    //audio
+    public AudioClip[] footstepSounds;
+    public float minTimeBetweenFootsteps = 0.3f;
+    public float maxTimeBetweenFootsteps = 0.6f;
+
+    private AudioSource audioSource;
+    private float timeSinceLastFootstep;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void Start()
     {
@@ -55,6 +66,20 @@ public class MoveMent : MonoBehaviour
         if (PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
+        }
+
+
+        if (IsMoving || IsMoving1)
+        {
+            // Check if enough time has passed to play the next footstep sound
+            if (Time.time - timeSinceLastFootstep >= Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps))
+            {
+                // Play a random footstep sound from the array
+                AudioClip footstepSound = footstepSounds[Random.Range(0, footstepSounds.Length)];
+                audioSource.PlayOneShot(footstepSound);
+
+                timeSinceLastFootstep = Time.time; // Update the time since the last footstep sound
+            }
         }
     }
     public void Death()
