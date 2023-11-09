@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +11,7 @@ public class ButtonFix : MonoBehaviour
     public Type ButtonType;
     public bool isholding;
     public MoveMent player;
-    public bool button2;
+    public int button2;
     private void Start()
     {
         Button = gameObject.GetComponent<Image>();
@@ -20,13 +19,13 @@ public class ButtonFix : MonoBehaviour
     }
     public void Update()
     {
-        if(button2 == true)
+        if(button2 == 1)
         {
             player.IsMoving1 = isholding;
         }
-        else
+        if (button2 == 2)
         {
-        player.IsMoving = isholding;
+            player.IsMoving = isholding;
         }
 
         if (isholding)

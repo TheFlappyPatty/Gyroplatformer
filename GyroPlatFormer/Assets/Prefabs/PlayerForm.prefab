@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297e2e247f3fd58478ad5c4d912f3e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 400
+  MovementSpeed: 18
   JumpHeight: 15
   MaxSpeed: 10
   DeathHieght: -30
@@ -318,7 +318,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2807690172357146090}
-  m_Material: {fileID: 13400000, guid: 655743887ed674249be7f10ec67f47f3, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -732,7 +732,7 @@ MonoBehaviour:
   ButtonType: 0
   isholding: 0
   player: {fileID: 5743881423965219982}
-  button2: 0
+  button2: 2
 --- !u!114 &5346182513109591736
 MonoBehaviour:
   m_ObjectHideFlags: 0
