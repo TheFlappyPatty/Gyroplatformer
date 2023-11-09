@@ -38,7 +38,7 @@ public class MoveMent : MonoBehaviour
     public float minTimeBetweenFootsteps = 0.3f;
     public float maxTimeBetweenFootsteps = 0.6f;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private float timeSinceLastFootstep;
 
     private void Awake()
