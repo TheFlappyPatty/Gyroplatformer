@@ -304,6 +304,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3fde81ca89e18f641a3836f2359eb361, type: 3}
   - {fileID: 8300000, guid: 0e73d86b11f5a9343a27845799e0701c, type: 3}
   - {fileID: 8300000, guid: 43bbe41f4766f604daac1b85c9b2a4cb, type: 3}
+  Landingsound: {fileID: 8300000, guid: e30bfb2cc52638b478fe9c0f6f8d5996, type: 3}
   minTimeBetweenFootsteps: 0.3
   maxTimeBetweenFootsteps: 0.6
   audioSource: {fileID: 0}
