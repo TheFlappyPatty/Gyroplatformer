@@ -38,7 +38,7 @@ public class MoveMent : MonoBehaviour
     {
         JH = JumpHeight;
         MS = MovementSpeed;
-        DeathWall = GameObject.FindGameObjectWithTag("DeathWall");
+        DeathWall = GameObject.FindGameObjectWithTag("DeathFloor");
         PlayerRB = GetComponent<Rigidbody>();
     }
     public void Update()
