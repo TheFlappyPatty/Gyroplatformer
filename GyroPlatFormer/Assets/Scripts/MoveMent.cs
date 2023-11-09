@@ -35,6 +35,7 @@ public class MoveMent : MonoBehaviour
     //audio
     public AudioClip[] footstepSounds;
     public AudioClip[] JumpSounds;
+    public AudioClip Landingsound;
     public float minTimeBetweenFootsteps = 0.3f;
     public float maxTimeBetweenFootsteps = 0.6f;
 
@@ -64,6 +65,7 @@ public class MoveMent : MonoBehaviour
         {
             PlayerRB.AddForce(-PlayerRB.velocity * SlideResistance, ForceMode.Acceleration);
         }
+
         if (PlayerRB.velocity.magnitude > MaxSpeed)
         {
             PlayerRB.velocity = PlayerRB.velocity.normalized * MaxSpeed;
@@ -127,6 +129,7 @@ public class MoveMent : MonoBehaviour
         if(collision.transform.tag == "Ground")
         {
             Inair = false;
+            audioSource.PlayOneShot(Landingsound);
         }
         if(collision.transform.tag == "DeathFloor")
         {
