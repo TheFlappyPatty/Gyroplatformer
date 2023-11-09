@@ -228,3 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef8c68b71d684341be6767288ac3945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 7463958557776682819}
+  MoveSpeed: 18
+  JumpHeight: 5
+  MaxMoveSpeed: 10
+  AntiSlide: 2
+  PlayerRB: {fileID: 3181249548892308307}
+  MouseSens: 0
