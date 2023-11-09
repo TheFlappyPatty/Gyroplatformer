@@ -36,6 +36,7 @@ public class MoveMent : MonoBehaviour
     public AudioClip[] footstepSounds;
     public AudioClip[] JumpSounds;
     public AudioClip Landingsound;
+    public AudioClip Wallcollision;
     public float minTimeBetweenFootsteps = 0.3f;
     public float maxTimeBetweenFootsteps = 0.6f;
 
@@ -130,6 +131,10 @@ public class MoveMent : MonoBehaviour
         {
             Inair = false;
             audioSource.PlayOneShot(Landingsound);
+        }
+        if(collision.transform.tag == "Wall")
+        {
+            audioSource.PlayOneShot(Wallcollision);
         }
         if(collision.transform.tag == "DeathFloor")
         {

@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - CheckPoint
   - DeathFloor
+  - Wall
   layers:
   - Default
   - TransparentFX
