@@ -286,10 +286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 18
-  JumpHeight: 15
+  JumpHeight: 10
   MaxSpeed: 10
   DeathHieght: -30
-  SlideResistance: 0
+  SlideResistance: 2
   CheckPoint: {fileID: 0}
   DeathBoxPos: {x: 0, y: 0, z: 0}
   DeathWall: {fileID: 0}
