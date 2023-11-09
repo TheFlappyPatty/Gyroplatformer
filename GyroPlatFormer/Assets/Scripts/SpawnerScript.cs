@@ -11,7 +11,7 @@ public class SpawnerScript : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         if (SystemInfo.supportsGyroscope)
         {
-            Instantiate(GyroPlayer,transform.position,Quaternion.identity,null);
+            Instantiate(GyroPlayer,transform.position,Quaternion.identity,null).GetComponent<MoveMent>().CheckPoint = gameObject;
         }
         else
         {
