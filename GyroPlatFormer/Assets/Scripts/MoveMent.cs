@@ -34,6 +34,7 @@ public class MoveMent : MonoBehaviour
     public bool IsMoving1;
     //audio
     public AudioClip[] footstepSounds;
+    public AudioClip[] JumpSounds;
     public float minTimeBetweenFootsteps = 0.3f;
     public float maxTimeBetweenFootsteps = 0.6f;
 
@@ -69,7 +70,7 @@ public class MoveMent : MonoBehaviour
         }
 
 
-        if (IsMoving || IsMoving1)
+        if (IsMoving || IsMoving1 && Inair == false)
         {
             // Check if enough time has passed to play the next footstep sound
             if (Time.time - timeSinceLastFootstep >= Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps))
@@ -108,6 +109,8 @@ public class MoveMent : MonoBehaviour
      if(Inair == false)
         {
             PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
+            var Jumpaudio = PlayerRB.gameObject.GetComponent<MoveMent>().JumpSounds;
+            PlayerRB.gameObject.GetComponent<AudioSource>().PlayOneShot(Jumpaudio[Random.Range(0,Jumpaudio.Length)]);
             Inair = true;
         }   
     }
