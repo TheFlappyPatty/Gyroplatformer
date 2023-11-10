@@ -131,14 +131,13 @@ public class MoveMent : MonoBehaviour
         {
             Inair = false;
             audioSource.PlayOneShot(Landingsound);
-        }
-        if(collision.transform.tag == "Wall")
-        {
-            audioSource.PlayOneShot(Wallcollision);
-        }
-        if(collision.transform.tag == "DeathFloor")
+        } else if (collision.transform.tag == "DeathFloor")
         {
             Death();
+        } else {
+            audioSource.PlayOneShot(Wallcollision);
         }
+
+
     }
 }
