@@ -234,4 +234,4 @@ MonoBehaviour:
   MaxMoveSpeed: 10
   AntiSlide: 2
   PlayerRB: {fileID: 3181249548892308307}
-  MouseSens: 0
+  MouseSens: 1
