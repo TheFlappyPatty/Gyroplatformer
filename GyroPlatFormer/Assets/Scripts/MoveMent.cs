@@ -111,10 +111,20 @@ public class MoveMent : MonoBehaviour
     {
      if(Inair == false)
         {
-            PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
-            var Jumpaudio = PlayerRB.gameObject.GetComponent<MoveMent>().JumpSounds;
-            PlayerRB.gameObject.GetComponent<AudioSource>().PlayOneShot(Jumpaudio[Random.Range(0,Jumpaudio.Length)]);
-            Inair = true;
+            if (PlayerRB.gameObject.GetComponent<MoveMent>().IsMoving || PlayerRB.gameObject.GetComponent<MoveMent>().IsMoving1)
+            {
+                PlayerRB.AddForce(MoveDiection.transform.up * JH * 3, ForceMode.VelocityChange);
+                var Jumpaudio = PlayerRB.gameObject.GetComponent<MoveMent>().JumpSounds;
+                PlayerRB.gameObject.GetComponent<AudioSource>().PlayOneShot(Jumpaudio[Random.Range(0, Jumpaudio.Length)]);
+                Inair = true;
+            }
+            else
+            {
+                PlayerRB.AddForce(MoveDiection.transform.up * JH, ForceMode.VelocityChange);
+                var Jumpaudio = PlayerRB.gameObject.GetComponent<MoveMent>().JumpSounds;
+                PlayerRB.gameObject.GetComponent<AudioSource>().PlayOneShot(Jumpaudio[Random.Range(0, Jumpaudio.Length)]);
+                Inair = true;
+            }
         }   
     }
     public void OnTriggerEnter(Collider other)
