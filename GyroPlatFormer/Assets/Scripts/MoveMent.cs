@@ -22,16 +22,17 @@ public class MoveMent : MonoBehaviour
     public static float JH;
    private static Rigidbody PlayerRB;
     private static GameObject MoveDiection;
+
     //Checkpoint and Death systems
     public GameObject CheckPoint;
     public Vector3 DeathBoxPos;
     public GameObject DeathWall;
 
-
     //Player States
     public static bool Inair = false;
     public bool IsMoving;
     public bool IsMoving1;
+
     //audio
     public AudioClip[] footstepSounds;
     public AudioClip[] JumpSounds;
